@@ -1,0 +1,146 @@
+.contact-header {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    margin-top: -120px; /* Pull up into the navbar space */
+    padding-top: 180px; /* Compensate inside */
+}
+
+/* Static SVG Backgrounds */
+.svg-background {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    opacity: 1.5;
+}
+
+.svg-background-1 {
+    bottom: 200px;
+    left: 0;
+    height: auto;
+}
+
+.svg-background-2 {
+    top: 0;
+    right: 0;
+    height: auto;
+    z-index: 9;
+}
+
+.svg-background svg {
+    width: 100%;
+    height: auto;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Fredoka' , sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-header .highlight {
+    background: linear-gradient(92deg, #173E6E 0.67%, #000AFF 64.61%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Chakra Petch' , sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.contact-header p {
+    color: #756A7B;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-header .paragraph{
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.svg-decor {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.svg-decor.top-right {
+  top: 0;
+  right: 0;
+  z-index: 0;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+    .svg-background-1 {
+        bottom: -200px;
+        left: -250px;
+        width: 500px;
+    }
+    
+    .svg-background-2 {
+        top: -150px;
+        right: -200px;
+        width: 600px;
+    }
+    
+    .svg-decor.top-right svg{
+        width: 350px !important;
+    }
+    
+    .svg-decor.top-right {
+        top: -100px;
+        right: 20px;
+    }
+
+    .svg-decor.bottom-left svg{
+        width: 350px !important;
+    }
+    
+    .svg-decor.bottom-left {
+        top: 100px;
+        right: 20px;
+    }
+    
+    .form-card{
+        margin-left: 0px !important;
+    }
+}
+
+.svg-decor.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+/* Remove duplicate .contact-header rule and consolidate styles */
+
+.navbar {
+  position: relative;
+  z-index: 2;
+}

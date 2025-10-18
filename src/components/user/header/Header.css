@@ -1,0 +1,500 @@
+/* ===============================
+   Typography (Scoped to .header-section)
+================================== */
+.main-header-left h1 {
+  color: #17406A;
+  font-size: 4rem !important;
+}
+
+.main-header-left p {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.main-header-left .span-ls {
+  background: linear-gradient(to right, #173E67, #040DEE);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===============================
+   Layout Utilities
+================================== */
+.header-section .main-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.header-section .calendar-main {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===============================
+   Calendar Container & Behind Card
+================================== */
+.header-section .calendar-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  max-width: 550px;
+  border-radius: 25px;
+  transform: rotate(4deg);
+}
+
+/* Behind Card */
+.behind-card {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-20%, -50%) rotate(-25deg);
+  width: 60%;
+  background: linear-gradient(to top left, rgba(170, 174, 255, 0.6), rgba(255, 255, 255, 0.6));
+  border-radius: 50px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+              -5px -5px 15px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all 1s ease;
+  opacity: 1;
+  z-index: -1;
+} 
+.behind-card .card-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Success Header */
+.success-header {
+  margin-bottom: 1.5rem;
+}
+
+.success-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -25px;
+}
+
+.checkmark-circle {
+  width: 2rem;
+  height: 2rem;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #FFF;
+  text-align: center;
+  font-family: 'Fredoka One' , sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Booking Info */
+.booking-info {
+  margin-bottom: 0.6rem;
+}
+
+
+.confirmation-text {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  font-family: 'Work Sans' , sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+/* Ticket Section */
+
+
+.ticket-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+/* PDF Button */
+.pdf-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pdf-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* ===============================
+   Card Inside Behind Card
+================================== */
+.header-section .card-body {
+  text-align: center;
+}
+
+
+
+/* Calendar Container */
+.calendar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  background: transparent;
+  padding: 1rem;
+  position: relative;
+}
+
+.calendar-wrapper {
+  position: relative;
+}
+
+.behind-card.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999999;
+  position: absolute;
+  left: 9rem;
+    transform: translate(-20%, -50%) rotate(-20deg);
+
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-button {
+  background: black;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background: #374151;
+}
+
+/* Calendar Main */
+.calendar-main {
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.calendar-main.elevated {
+  transform: translateY(-10px);
+}
+
+.calendar-card {
+  border-radius: 3.125rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: 28rem;
+  background: linear-gradient(to top left, #E6E7FB, #ffffff);
+  position: relative;
+  z-index: 2;
+}
+
+/* AI Badge */
+.ai-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.green-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #10b981;
+  border-radius: 50%;
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Calendar Header */
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-arrow {
+  color: #4b5563;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-arrow:hover {
+  color: #111827;
+}
+
+.month-year {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.day-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Days of Week */
+.days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  margin-bottom: 0.5rem;
+}
+
+.day-header {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  color: #111BF1;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+}
+
+.date-cell {
+  position: relative;
+}
+
+.date-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.date-button.disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.date-button.enabled {
+  color: #374151;
+  cursor: pointer;
+}
+
+.date-button.selected {
+  border-radius: 1.125rem 1.125rem 1.125rem 0;
+  background: radial-gradient(89.67% 89.67% at 28.57% 17.14%, #01CBFF 0%, #4B88F7 100%);
+  box-shadow: 2.346px 18.767px 25.804px -2.346px rgba(223, 81, 21, 0.47);
+  color: white;
+  font-weight: 500;
+}
+
+.date-button.hovered {
+  border-radius: 0.5rem;
+  border: 2px solid #7FCAF5;
+  background: white;
+}
+
+/* Range Background */
+.range-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(89.67% 89.67% at 28.57% 17.14%, rgba(43, 159, 241, 0.12) 0%, rgba(0, 209, 255, 0.12) 100%);
+  border-radius: 0;
+}
+
+.range-background.start {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+.range-background.end {
+    border-radius: 0 1rem 1rem 0;
+    width: 85%;
+  }
+
+/* Online Status */
+.online-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Book Button */
+.book-button-container {
+  position: relative;
+  z-index: 4;
+}
+
+.book-button {
+  display: flex;
+  width: 11.25rem;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0px 0.625rem 0.625rem 0.625rem;
+  background: linear-gradient(to right, #1148FA, #2A9AF2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(100%);
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+.book-button:hover {
+  opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+  .main-header-left{
+    padding: 2rem !important;
+  }
+  .main-header-left h1{
+    font-size: 3rem !important;
+  }
+  .main-header-left p{
+    font-size: 1rem !important;
+  }
+  .calendar-card{
+    width: auto;
+  }
+  .calendar-card .calendar-header{
+    margin-bottom: 0;
+  }
+  .behind-card{
+    width: 85% ;
+    left: 23%;
+    top: 45%;
+  }
+  .behind-card.show{
+    left: 5rem;
+    transform: translate(-20%, -50%) rotate(-15deg);
+  }
+  .ticket-details{
+    justify-content: center;
+  }
+}

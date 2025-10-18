@@ -1,0 +1,18 @@
+/* MapPage Responsive Styles */
+
+/* Default styles for mobile and tablet - no special positioning */
+.search-bar-overlay {
+  /* No special positioning for mobile/tablet */
+}
+
+/* Laptop screens and above - apply the overlay positioning */
+@media (min-width: 1024px) {
+  .search-bar-overlay {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+  }
+}

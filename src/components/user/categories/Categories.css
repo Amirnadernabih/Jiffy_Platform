@@ -1,0 +1,111 @@
+.category-name{
+  color: #424242;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+.slider-container {
+    padding: 0 15px; 
+    margin: 100px 0px 0px 50px;
+  }
+  
+  .card-wrapper {
+    padding: 0 10px; 
+    box-sizing: border-box; 
+  }
+  
+  .category-card {
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    border-radius: 22px 22px 22px 0px !important;
+    overflow: hidden; 
+  }
+  
+  
+  .card-img {
+    width: 95%; 
+    height: 550px; 
+    margin: 0 auto; 
+  }
+  .card-img, .card-img-bottom {
+    border-bottom-left-radius: 0 !important;
+}
+  
+  .card-body-overlay {
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    right: 20px; 
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.395)); 
+    color: #000 !important;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    font-size: 19px;
+    border-radius: 20px 20px 20px 0; 
+}
+  
+  
+  .card-body-overlay .card-text {
+    width: 100%; /* Ensure text takes full width */
+    text-align: start; /* Center text horizontally */
+    margin-left: 50px;  
+    color: #424242;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 127.8%; /* 23.004px */
+    letter-spacing: -0.18px;
+}
+  
+  .card-body-overlay .discover-btn {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 5px 10px; /* Adjust padding for button size */
+    font-size: 16px;
+    align-self: flex-end; /* Align button to the end of the card */
+    border-radius: 14px 14px 14px 0px;  
+    border: none;   
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .category-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .card-body-overlay {
+    font-size: 16px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .card-body-overlay .card-text {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .card-body-overlay .discover-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+  .slider-container {
+    padding: 0 15px; 
+    margin: 100px 0px 0px 0px;
+  }
+}
+
+

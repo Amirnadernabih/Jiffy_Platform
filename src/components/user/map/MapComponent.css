@@ -1,0 +1,62 @@
+.map-container {
+    width: 97.5%;
+    height: 100vh;
+    position: relative;
+    border-radius: 10px;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+    bottom: 100px;
+}
+
+.marker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.marker-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker-label-box {
+  background: white;
+  margin-top: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  color: #1144FA;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+
+}
+
+.popup-card {
+  font-family: Arial;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popup-button {
+  background: linear-gradient(277deg, #2B9FF1 10.5%, #1144FA 97.98%);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+.map-container {
+    width: 93%;
+    height: 60vh;
+  }
+
+}

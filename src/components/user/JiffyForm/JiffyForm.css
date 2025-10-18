@@ -1,0 +1,214 @@
+.jiffy-container {
+  background: rgba(0, 161, 253, 0.30);
+  border-radius: 0; 
+  padding: 60px 0px;
+  width: 100%;
+}
+
+.form-card {
+background: linear-gradient(143deg, rgba(254, 248, 255, 0.70) 6.95%, rgba(254, 248, 255, 0.60) 100.43%);  padding: 80px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  margin-left: 40px;
+}
+
+.form-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #424242;
+  font-family: 'Work Sans',sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  margin-bottom: 1.25rem ;
+}
+
+.form-subheading {
+  color: #6e6e6e;
+  margin-bottom: 1.25rem ;
+  align-self: stretch;
+  font-family: 'Noto Sans' , sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.highlight {
+  color: #2B59FF;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.jiffy-form .form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 1.875rem;
+  gap: 1.875rem;
+}
+
+
+.input,
+.textarea {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  background: #EEF8FF;
+}
+
+.textarea {
+  resize: none;
+  height: 100px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 30px;
+  background: #EEF8FF; 
+  margin-bottom: 1.875rem;
+}
+/* General select reset */
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none !important;
+  border: none;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #6e6e6e;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  outline: none;
+  border-radius: 30px;
+  background: #EEF8FF;
+}
+
+.send-button {
+  border-radius: 18px 18px 18px 0px;
+  background: linear-gradient(277deg, #2B9FF1 10.5%, #1144FA 97.98%);
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.send-button:hover {
+  opacity: 0.9;
+}
+
+.contact-info {
+  padding: 0 20px;
+}
+
+.contact-title {
+  margin-bottom: 10px;
+  align-self: stretch;
+  color: #268FF3;
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.25px;
+  text-transform: uppercase;
+  margin-bottom: 1.875rem ;
+}
+
+.contact-heading {
+  font-size: 2rem;
+  margin-bottom: 1.875rem ;
+  color: #424242;
+  font-family: 'Work Sans' , sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+.contact-heading .highlight{
+ background: linear-gradient(93deg, #0F33B4 64.84%, #020FF0 78.72%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: 'Chakra Petch' , sans-serif;
+font-size: 2rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.64px;
+}
+.contact-text {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 1.875rem ;
+}
+
+.contact-line {
+  margin-bottom: 1.875rem ;
+  font-size: 0.95rem;
+  display: flex; 
+  gap: 1.25rem;
+}
+.contact-line h6{
+  color:  #2D2D2D;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0 !important;
+}
+
+.contact-line p {
+color:  #6E6E6E;
+font-family: 'Open Sans' , sans-serif;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 400;
+line-height: 29px; 
+}
+.contact-line div{
+  gap: 6px;
+
+}
+.FontAwesomeIcon-form{
+font-size: 2.2rem;
+}
+::placeholder {
+  color: #6E6E6E;
+  opacity: 1; /* Ensure full color visibility */
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #6E6E6E;
+}
+::-webkit-input-placeholder {
+  color: #6E6E6E;
+}
+:-ms-input-placeholder {
+  color: #6E6E6E;
+}

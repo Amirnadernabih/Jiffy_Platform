@@ -1,0 +1,154 @@
+.services-header {
+  position: relative;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  color: white;
+  margin: 5rem 0rem;
+}
+
+.svg-layer,
+.grid-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* Make grid smaller on mobile */
+@media (max-width: 768px) {
+  .grid-layer svg {
+    width: 100%;
+  }
+  .services-header {
+  margin: 1rem 0rem;
+}
+}
+
+
+
+.svg-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.grid-overlay {
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Fredoka' , sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72px; /* 112.5% */
+  letter-spacing: -2.56px;
+  background: linear-gradient(180deg, #000 30%, #343841 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.jiffy-title{
+  background:  #000AFF;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Chakra Petch' , sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: -2.56px;
+}
+.subtitle {
+color: #343841;
+text-align: center;
+font-family: 'Space Grotesk' , sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+.main-subtitle{
+  text-align: center;
+  font-family: 'Space Grotesk' , sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.24px;
+  background: linear-gradient(180deg, #000 15%, #343841 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.toggle-buttons {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(52, 56, 65, 0.44);
+  backdrop-filter: blur(6.000000476837158px);
+  display: inline-flex;
+  padding: 4px;
+  align-items: flex-start;
+}
+
+.toggle-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.4s ease, color 0.4s ease;
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.toggle-btn.active {
+  transform: scale(1.05);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00D1FF 0%, #2B9FF1 100%);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.25) inset;
+}
+
+
+/* Add this inside your existing CSS file */
+.toggle-buttons {
+  position: relative;
+  overflow: hidden;
+}
+.toggle-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px); /* Equal half of toggle-buttons */
+  height: calc(100% - 8px);
+  border-radius: 9999px; /* Fully rounded like a switch */
+  background: linear-gradient(180deg, #00D1FF 0%, #2B9FF1 100%);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.25) inset;
+  transition: transform 2s ease;
+  z-index: 0;
+}
+
+/* Optional smooth press scaling (existing) */
+.toggle-btn {
+  position: relative;
+  z-index: 1;
+  transition: background 0.4s ease, transform 0.4s ease, color 0.4s ease;
+}

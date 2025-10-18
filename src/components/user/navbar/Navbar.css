@@ -1,0 +1,193 @@
+/* Navbar wrapper for dynamic positioning */
+.navbar-wrapper {
+  transition: all 0.3s ease;
+}
+
+.custom-navbar {
+  /* background-color: transparent; */
+  padding: 1rem;
+  /* z-index is managed by the layout wrapper for Bootstrap compatibility */
+  border-radius: 20px !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.30) 0%, rgba(250, 250, 250, 0.30) 100%);
+  width: 90%;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+.map-navbar {
+  border-radius: 0px 0px 50px 50px;
+  background: #FFF;
+  width: 75%;
+  margin: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* optional: adds subtle elevation */
+}
+
+.loginbtn.btn {
+  background: linear-gradient(to right, #1148FA, #2A9AF2);
+  border-radius: 15px 15px 15px 0px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginbtn.btn:hover {
+  opacity: 0.9;
+}
+
+.navbar-toggler {
+  border: none;
+  position: relative;
+  z-index: 1051;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+  color: #000;
+  font-size: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1148FA;
+}
+
+.right-nav {
+  gap: 1rem;
+}
+
+.gradient-border-nav:hover {
+  border-radius: 15px 15px 15px 0px !important;
+  background: 
+    linear-gradient(white, white) padding-box, /* button background */
+    linear-gradient(90deg, rgba(2, 15, 240, 1), rgba(0, 209, 255, 1)) border-box; /* gradient border */
+  border: 1px solid transparent; /* required to show gradient */
+  cursor: pointer;
+  transition: all 0s ease;
+}
+
+.gradient-border-nav:hover .nav-link {
+  color: #000;
+}
+
+/* Offcanvas styles */
+.offcanvas {
+  width: 300px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 250, 250, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999999 !important;
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.offcanvas-title {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.offcanvas-body {
+  padding: 2rem 1.5rem;
+}
+
+.offcanvas-body .nav-link {
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.offcanvas-body .nav-link:hover {
+  color: #1148FA;
+  padding-left: 0.5rem;
+}
+
+.gradient-border-nav-mobile {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gradient-border-nav-mobile .nav-link {
+  background: linear-gradient(90deg, rgba(2, 15, 240, 0.1), rgba(0, 209, 255, 0.1));
+  border-radius: 10px;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid rgba(2, 15, 240, 0.2);
+}
+
+.gradient-border-nav-mobile .nav-link:hover,
+.gradient-border-nav-mobile .nav-link:focus,
+.gradient-border-nav-mobile .nav-link:active {
+  background: transparent !important;
+}
+
+/* Backdrop overlay */
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.offcanvas-backdrop.fade {
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 1;
+}
+
+/* Close button styling */
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 991.98px) {
+  .map-navbar {
+    width: 85%;
+  }
+  
+  /* Hide default Bootstrap collapse behavior on mobile */
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+
+/* Desktop view - ensure offcanvas is hidden */
+@media (min-width: 992px) {
+  .offcanvas,
+  .offcanvas-backdrop {
+    display: none !important;
+  }
+  
+  .navbar-toggler {
+    display: none !important;
+  }
+}

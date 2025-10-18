@@ -1,0 +1,636 @@
+.client-main {
+    padding: 24px;
+    min-height: 100vh;
+    background-color: #f6f8fb;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  /* Navigation Styles - Exact match to design */
+  .client-main .navbar-custom {
+    padding: 0;
+    margin-bottom: 32px;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .client-main .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .client-main .breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .client-main .breadcrumb-item {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8b929c;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .client-main .breadcrumb-item.active {
+    color: #2d3748;
+    font-weight: 500;
+    cursor: default;
+  }
+  
+  .client-main .breadcrumb-item.clickable:hover {
+    color: #4a5568;
+  }
+  
+  .client-main .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .client-main .three-dots {
+    font-size: 18px;
+    color: #a0aec0;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .client-main .nav-avatars {
+    margin: 0;
+  }
+  
+  .client-main .nav-avatars .MuiAvatar-root {
+    border: 2px solid white;
+    margin-left: -8px;
+  }
+  
+  .client-main .nav-avatars .MuiAvatar-root:first-child {
+    margin-left: 0;
+  }
+  
+  .client-main .today-dropdown {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 4px;
+  }
+  
+  .client-main .today-dropdown:hover {
+    color: #4a5568;
+  }
+  
+  /* Flexbox Three Column Layout - Exact spacing */
+  .client-main .columns-container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  
+  .client-main .column-wrapper {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Column Header Styles - Exact match */
+  .client-main .column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .client-main .column-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3748;
+    margin: 0;
+  }
+  
+  .client-main .add-button {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    color: #a0aec0;
+    padding: 0;
+    min-width: 24px;
+  }
+  
+  .client-main .add-button:hover {
+    background-color: #f7fafc;
+    color: #718096;
+  }
+  
+  .client-main .add-button .MuiSvgIcon-root {
+    font-size: 14px;
+  }
+  
+  /* Card Styles - Pixel perfect match to design */
+  .client-main .client-card {
+    border-radius: 12px;
+    background: var(--bg-linear, linear-gradient(90deg, rgba(26, 181, 253, 0.15) 9.5%, rgba(21, 81, 249, 0.15) 49.25%, rgba(26, 181, 253, 0.15) 98.98%));    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    margin-bottom: 12px;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .client-main .client-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .client-main .card-tag {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    z-index: 2;
+    border: none;
+    margin: 1rem;
+  }
+  
+  .client-main .card-image-container {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .client-main .card-image {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    display: flex;
+    margin: auto;
+    border-radius: 1rem;
+  }
+  
+  .client-main .card-content {
+    padding: 12px;
+    background: transparent;
+  }
+  
+  .client-main .card-title {
+    margin: 0 0 4px 0 ;
+    color: #232360 !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: start;
+  }
+  
+  .client-main .card-description {
+    margin: 0 0 12px 0;
+    color: #768396 !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: start;
+  }
+  .client-main .card-date-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    text-align: start;
+    border-radius: 4px;
+    border: 1px solid #E2E2E2;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+  }
+  .client-main .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .client-main .card-footer-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .client-main .card-date {
+    font-size: 10px;
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  
+  .client-main .card-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .client-main .card-icon {
+    color: #a0aec0;
+    font-size: 12px;
+  }
+  
+  .client-main .card-meta {
+    font-size: 10px;
+    color: #a0aec0;
+  }
+  
+  .client-main .card-progress {
+    font-size: 10px;
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  
+  .client-main .card-avatars {
+    gap: 0;
+    margin: 0;
+  }
+  
+  .client-main .card-avatars .MuiAvatar-root {
+    border: 1.5px solid white;
+    margin-left: -6px;
+  }
+  
+  .client-main .card-avatars .MuiAvatar-root:first-child {
+    margin-left: 0;
+  }
+  
+  /* Column Content */
+  .client-main .column-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Timeline Content */
+  .client-main .timeline-content {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .client-main .timeline-content h1 {
+    color: #2d3748;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .client-main {
+      padding: 20px;
+    }
+    
+    .client-main .columns-container {
+      gap: 16px;
+    }
+    
+    .client-main .breadcrumb-nav {
+      gap: 16px;
+    }
+  }
+  
+  /* Tablet view - Keep three columns side by side */
+  @media (max-width: 768px) {
+    .client-main {
+      padding: 16px;
+    }
+    
+    .client-main .columns-container {
+      gap: 12px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .client-main .column-wrapper {
+      min-width: 250px;
+      flex-shrink: 0;
+    }
+    
+    .client-main .column-title {
+      font-size: 14px;
+    }
+    
+    .client-main .card-title {
+      font-size: 12px;
+    }
+    
+    .client-main .card-description {
+      font-size: 11px;
+    }
+    
+    .client-main .card-image-container {
+      height: 120px;
+    }
+    
+    .client-main .breadcrumb-nav {
+      gap: 12px;
+    }
+    
+    .client-main .breadcrumb-item {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile view - Switch to single column only on very small screens */
+  @media (max-width: 480px) {
+    .client-main {
+      padding: 12px;
+    }
+    
+    .client-main .columns-container {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      overflow-x: visible;
+    }
+    
+    .client-main .column-wrapper {
+      max-width: 100%;
+      min-width: 0;
+      flex-shrink: 1;
+    }
+    
+    .client-main .nav-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .client-main .nav-right {
+      align-self: flex-end;
+    }
+  }
+
+
+/* Timeline Styles - overall container */
+.client-main .timeline-container {
+  padding: 40px 30px;
+  background: #FAFBFC;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+/* Header days */
+.client-main .timeline-header {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 0;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.client-main .timeline-day-header {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: #8B94A8;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.client-main .timeline-day-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 8px;
+  background: #E5E9F2;
+}
+
+/* Grid */
+.client-main .timeline-grid {
+  position: relative;
+  height: 500px;
+  margin-top: 20px;
+}
+
+.client-main .timeline-grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 0;
+  padding: 0 10px;
+}
+
+.client-main .timeline-grid-line {
+  border-right: 1px solid #F1F3F7;
+  height: 100%;
+}
+
+.client-main .timeline-grid-line:last-child {
+  border-right: none;
+}
+
+.client-main .timeline-tasks {
+  position: relative;
+  height: 100%;
+  padding: 0 10px;
+}
+
+/* wrapper for each task (keeps absolute positioning) */
+.client-main .timeline-task-wrapper {
+  position: absolute;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.client-main .timeline-task-wrapper:hover {
+  transform: translateY(-2px);
+  z-index: 3;
+}
+
+/* TRACK = the full pill (lightened background) */
+.client-main .client-main-timeline-track {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow .2s ease;
+}
+
+/* SOLID FILL = the left colored portion. width set inline */
+.client-main .client-main-timeline-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  transition: width .25s ease, border-radius .25s ease;
+  z-index: 1;
+}
+
+/* LEFT CONTENT sits on top of the fill and is clipped by its width */
+.client-main .client-main-timeline-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  z-index: 2; /* above fill */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.client-main .dot-container{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+    border-radius: 50%;
+}
+/* DOT inside the left area */
+.client-main .client-main-timeline-dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* Task title inside left area */
+.client-main .client-main-timeline-title {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RIGHT CONTENT sits above the track on the right side and shows the percentage badge */
+.client-main .client-main-timeline-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  z-index: 2;
+  min-width: 60px;
+}
+
+/* percentage badge */
+.client-main .client-main-percentage-badge {
+  background: #fff;
+  color: #222;
+  border-radius: 16px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 0 4px 10px rgba(5, 10, 20, 0.06);
+  white-space: nowrap;
+}
+
+/* Hover */
+.client-main .timeline-task-wrapper:hover .client-main-timeline-track {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .client-main .timeline-container {
+    padding: 30px 20px;
+    overflow-x: auto;
+  }
+
+  .client-main .timeline-grid {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-main .timeline-container {
+    padding: 20px 15px;
+  }
+
+  .client-main .timeline-day-header {
+    font-size: 10px;
+  }
+
+  .client-main .timeline-task-wrapper {
+    height: 36px;
+  }
+
+  .client-main .client-main-timeline-left {
+    padding: 0 12px;
+  }
+
+  .client-main .client-main-percentage-badge {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-main .timeline-container {
+    padding: 15px 10px;
+  }
+
+  .client-main .timeline-day-header {
+    font-size: 9px;
+    padding: 6px 0;
+  }
+
+  .client-main .timeline-task-wrapper {
+    height: 32px;
+  }
+
+  .client-main .client-main-timeline-left {
+    padding: 0 10px;
+  }
+
+  .client-main .client-main-percentage-badge {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .client-main .client-main-timeline-dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Scrollbar styling */
+.client-main .timeline-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.client-main .timeline-container::-webkit-scrollbar-track {
+  background: #F1F3F7;
+  border-radius: 3px;
+}
+
+.client-main .timeline-container::-webkit-scrollbar-thumb {
+  background: #C7CCD8;
+  border-radius: 3px;
+}
+
+.client-main .timeline-container::-webkit-scrollbar-thumb:hover {
+  background: #9CA3B0;
+}
