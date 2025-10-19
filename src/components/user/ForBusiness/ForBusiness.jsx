@@ -8,6 +8,7 @@ import mainImage from '../../../assets/Pro-LandingPage/firstsection/main-image.p
 import leftOverlay from '../../../assets/Pro-LandingPage/firstsection/left-overlayed.png';
 import rightOverlay from '../../../assets/Pro-LandingPage/firstsection/right-overlayed.png';
 import leftImage from '../../../assets/Pro-LandingPage/thirdsection/left-image.png';
+import { instagram, threads, linkedin, mainIcon, x as xIcon } from '../../../assets/consts/socialIcons.jsx';
 
 // Import testimonial images
 import sherifImg from '../../../assets/Pro-LandingPage/sixthsection/sherif.png';
@@ -151,12 +152,29 @@ export default function ForBusiness() {
             </Col>
             <Col lg={6} className="ai-visual">
               <div className="circular-graphic">
+                {/* Hide segmented wedges for symmetric reference look */}
+                {/* <div className="ring-segments" aria-hidden="true"></div> */}
                 <div className="circle-outer">
                   <div className="circle-middle">
                     <div className="circle-inner">
+                      <div className="vertical-line">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 292" fill="none">
+                          <path d="M2 290V2" stroke="url(#paint0_linear_1059_87582)" strokeOpacity="0.1" strokeWidth="3.02679" strokeLinecap="round" />
+                          <defs>
+                            <linearGradient id="paint0_linear_1059_87582" x1="2.5" y1="2" x2="2.5" y2="290" gradientUnits="userSpaceOnUse">
+                              <stop stopColor="#F8F8F8" stopOpacity="0.05" />
+                              <stop offset="1" stopColor="#F8F8F8" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      
                       <div className="center-icons">
-                        <i className="fab fa-instagram"></i>
-                        <i className="fab fa-github"></i>
+                        <div className="icon-wrapper" aria-label="LinkedIn">{linkedin}</div>
+                        <div className="icon-wrapper" aria-label="Instagram">{instagram}</div>
+                        <div className="middle-icon" aria-label="Main">{mainIcon}</div>
+                        <div className="icon-wrapper" aria-label="X">{xIcon}</div>
+                        <div className="icon-wrapper" aria-label="Threads">{threads}</div>
                       </div>
                     </div>
                   </div>

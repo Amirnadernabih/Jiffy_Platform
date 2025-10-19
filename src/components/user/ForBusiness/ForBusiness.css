@@ -117,7 +117,7 @@
 
 /* AI Booking Section */
 .ai-booking-section {
-  padding: 120px 0;
+  padding: 200px 0;
   background: #f8fafc;
 }
 
@@ -152,10 +152,10 @@
 }
 
 .circle-outer {
-  width: 350px;
-  height: 350px;
+  width: 638px !important;
+  height: 638px !important;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00D1FF 0%, #4285F4 50%, #8B5CF6 100%);
+  background: linear-gradient(135deg, #00d0ff84 0%, #4285F4 50%, #8a5cf67b 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,10 +163,10 @@
 }
 
 .circle-middle {
-  width: 280px;
-  height: 280px;
+  width: 500px !important;
+  height: 500px !important;
   border-radius: 50%;
-  background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%);
+  background: linear-gradient(135deg, #60a5fa6f 0%, #a78bfa75 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,22 +174,20 @@
 }
 
 .circle-inner {
-  width: 200px;
-  height: 200px;
+  width: 355px !important;
+  height: 355px !important;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.516);
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
 }
 
-.center-icons {
-  display: flex;
-  gap: 20px;
-  font-size: 24px;
-  color: #4285F4;
-}
+.center-icons { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 60px; z-index: 6; }
+.center-icons .icon-wrapper { width: 100px; height: 100px; border-radius: 50%; background: radial-gradient( circle at 35% 30%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.08) 65%, rgba(255,255,255,0.02) 100% ), linear-gradient( 180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.10) 100% ); box-shadow: inset 0 1px 3px rgba(255,255,255,0.45), inset 0 -1px 3px rgba(0,0,0,0.08), 0 8px 20px rgba(46, 120, 230, 0.10); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #60A5FA; }
+.center-icons .icon-wrapper svg, .center-icons .icon-wrapper i { width: 3rem; height: 3rem; }
+.center-icons .middle-icon { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #3B82F6; }
 
 /* Customizable Interface Section */
 .customizable-section {
@@ -282,7 +280,7 @@
   margin-bottom: 60px;
 }
 
-.faq-list {
+.faq-section .faq-list {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -468,6 +466,70 @@
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .left-overlay-image,
+  .right-overlay-image {
+    display: none;
+  }
+  
+  .circular-graphic {
+    height: 300px;
+  }
+  
+  .circle-outer {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .circle-middle {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .circle-inner {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .ai-booking-section,
+  .customizable-section,
+  .pricing-section,
+  .faq-section {
+    padding: 60px 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    padding: 16px;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+  }
+  
+  .hero-badges {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .badge-heading,
+  .badge-new {
+    text-align: center;
+  }
+}o-title {
     font-size: 2.5rem;
   }
   

@@ -1,7 +1,6 @@
-import React, { useEffect, useMemo } from "react";
-import ServicePreviewContent from "./ServicePreviewContent";
+import React, { useMemo } from "react";
 
-export default function ServicePreviewModal({ data = {}, onClose }) {
+export default function ServicePreviewContent({ data = {} }) {
   const {
     // Step 3.1 (Hero)
     selectedTemplate = "",
@@ -20,17 +19,10 @@ export default function ServicePreviewModal({ data = {}, onClose }) {
     featureDescription = "",
     featureImage,
     featureAttachments = [],
-    // Optional theme (Step 5 future)
+    // Theme
     themeFont = "Inter, sans-serif",
     themePrimaryColor = "#4A3AFF",
   } = data || {};
-
-  // Close on Escape
-  useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") onClose?.(); };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
 
   const heroUrl = useMemo(() => {
     if (!heroImage) return null;
@@ -48,19 +40,6 @@ export default function ServicePreviewModal({ data = {}, onClose }) {
       return <div key={idx} className="thumb" style={{ backgroundImage: `url(${url})` }} />;
     });
   }, [featureAttachments]);
-
-  const renderNav = () => (
-    <div className="preview-nav">
-      <div className="brand">
-        <div className="logo-dot" />
-        <span>Jiffy Preview</span>
-      </div>
-      <div className="nav-actions">
-        <button className="ghost" onClick={onClose} aria-label="Close preview">Close</button>
-        <button className="cta">Book Now</button>
-      </div>
-    </div>
-  );
 
   const renderHeroSection = () => {
     switch (selectedTemplate) {
@@ -286,33 +265,22 @@ export default function ServicePreviewModal({ data = {}, onClose }) {
     </section>
   );
 
-  const handleOverlayClick = (e) => {
-    if (e.target.classList.contains("service-preview-overlay")) onClose?.();
-  };
-
   return (
     <div
-      className="service-preview-overlay"
-      role="dialog"
-      aria-modal="true"
-      onClick={handleOverlayClick}
+      className="service-preview-pro"
       style={{
-        // Theme variables for professional polish
         ['--preview-font']: themeFont,
         ['--preview-primary']: themePrimaryColor,
+        fontFamily: "var(--preview-font, Inter, sans-serif)",
       }}
     >
-      <div className="service-preview-modal service-preview-pro" style={{ fontFamily: "var(--preview-font, Inter, sans-serif)" }}>
-        {renderNav()}
-        <main className="preview-content">
-          <ServicePreviewContent data={data} />
-        </main>
-        <footer className="preview-footer">
-          <div className="container">
-            <span>© {new Date().getFullYear()} Jiffy Bookings — Preview</span>
-          </div>
-        </footer>
-      </div>
+      <main className="preview-content">
+        {renderHeroSection()}
+        {renderSubServices()}
+        {renderFeatures()}
+        {renderFAQs()}
+        {renderCTA()}
+      </main>
     </div>
   );
 }

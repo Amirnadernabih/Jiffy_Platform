@@ -6,6 +6,7 @@ import SubStep2Services from "./SubStep2Services";
 import SubStep3FAQs from "./SubStep3FAQs";
 import SubStep4Features from "./SubStep4Features";
 import ServicePreviewModal from "./ServicePreviewModal";
+import SubStep5Theme from "./SubStep5Theme";
 
 export default function Step3ServicesBuilder({ data, onUpdate, onNext, onPrev }) {
   const { currentSubStep, nextSubStep, prevSubStep, goToSubStep } = useSubStepNavigation(5);
@@ -17,7 +18,7 @@ export default function Step3ServicesBuilder({ data, onUpdate, onNext, onPrev })
     { number: 2, title: "Sub Services", shortTitle: "Services", id: "sub-services" },
     { number: 3, title: "FAQs", shortTitle: "FAQs", id: "faqs" },
     { number: 4, title: "Features", shortTitle: "Features", id: "features" },
-    { number: 5, title: "Form", shortTitle: "Form", id: "form" }
+    { number: 5, title: "Theme", shortTitle: "Theme", id: "theme" }
   ];
 
   const handleSubStepNext = () => {
@@ -76,7 +77,12 @@ export default function Step3ServicesBuilder({ data, onUpdate, onNext, onPrev })
         );
       case 5:
         return (
-          <div>Form SubStep - Coming Soon</div>
+          <SubStep5Theme
+            data={data}
+            onUpdate={onUpdate}
+            onPrev={handleSubStepPrev}
+            onNext={handleSubStepNext}
+          />
         );
       default:
         return (
