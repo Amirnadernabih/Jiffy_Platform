@@ -19,6 +19,9 @@ import InvoicesPage from '../pages/admin/InvoicesPage';
 import Chat from '../pages/admin/Chat';
 import Inbox from '../pages/admin/Inbox';
 import Clients from '../pages/admin/Clients';
+import ServicesForCustomers from '../components/user/ServicesForCustomers/ServicesForCustomers';
+import ServicesForBusinesses from '../components/user/ServicesForBusinesses/ServicesForBusinesses';
+import ServiceCategory from '../pages/user/ServiceCategory';
 
 const AppRoutes = () => {
   return (
@@ -33,6 +36,9 @@ const AppRoutes = () => {
         <Route path="pricing" element={<Pricing />} />
         <Route path="Map" element={<MapPage />} />
         <Route path="ForBusiness" element={<ForBusiness />} />
+        <Route path="services/customers" element={<ServicesForCustomers />} />
+        <Route path="services/customers/:category" element={<ServiceCategory />} />
+        <Route path="services/businesses" element={<ServicesForBusinesses />} />
       </Route>
 
       {/* Admin pages - ONLY accessible after login */}

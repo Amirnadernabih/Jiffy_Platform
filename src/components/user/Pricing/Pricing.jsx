@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import './Services.css';
-const Services = ({ plan }) => {
+import './Pricing.css';
+const Pricing = ({ plan }) => {
   const pricingPlans = [
     {
       title: 'Basic',
@@ -88,4 +88,4 @@ const Services = ({ plan }) => {
   );
 };
 
-export default Services;
+export default Pricing;

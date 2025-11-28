@@ -5,13 +5,15 @@
   
   .custom-card-wrapper {
     padding: 0px 20px 0px 50px; /* Adds spacing between cards */
-    
+    flex: 0 0 calc(100% / 3.5);
+    max-width: calc(100% / 3.5);
   }
 
 .custom-card {
     background: white;
     border-radius: 20px;
     height: 100%;
+    width: 100%;
   }
   
   .image-container {
@@ -76,8 +78,90 @@
     display: inline-block;
   }
   
+  @media (max-width: 1024px) {
+    .custom-card-wrapper { 
+      flex: 0 0 calc(100% / 2.5);
+      max-width: calc(100% / 2.5);
+    }
+  }
+  
   @media (max-width: 768px) {
   .custom-slider-container {
     padding: 20px 30px 20px 0px !important;
   }
+  .custom-card-wrapper { 
+    flex: 0 0 calc(100% / 1.5);
+    max-width: calc(100% / 1.5);
   }
+  }
+
+  @media (max-width: 480px) {
+    .custom-card-wrapper { 
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+.custom-slider-container { position: relative; }
+
+/* Hide horizontal scrollbar across browsers */
+.slider-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.slider-viewport::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Remove any grab/grabbing cursor styles */
+.slider-viewport,
+.custom-card-wrapper,
+.custom-slider-container {
+  cursor: default;
+}
+.jiffy-slider .slick-list { cursor: default !important; }
+.jiffy-slider .slick-list:active { cursor: default !important; }
+.jiffy-slider .slick-slide > div { padding: 0 !important; }
+.jiffy-slider .custom-card-wrapper {
+  flex: none !important;
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.jiffy-slider .custom-card { width: 92% !important; margin: 0 auto; }
+/* Remove arrow styles (arrows removed in JSX) */
+/* .slider-arrow { display: none; } */
+
+/* Ensure touch scrolling feels good on iOS */
+.slider-viewport {
+  -webkit-overflow-scrolling: touch;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.slider-arrow.left { left: 8px; }
+.slider-arrow.right { right: 8px; }
+.slider-arrow:hover { background: rgba(0,0,0,0.8); }
+
+/* Optional: snap cards when scrolling */
+/*
+.slider-viewport { scroll-snap-type: x mandatory; }
+.custom-card-wrapper { scroll-snap-align: start; }
+*/

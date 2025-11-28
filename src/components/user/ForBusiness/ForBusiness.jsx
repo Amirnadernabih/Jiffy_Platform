@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import './ForBusiness.css';
-import Services from '../Services/Services';
+import Pricing from '../Pricing/Pricing';
 import mainImage from '../../../assets/Pro-LandingPage/firstsection/main-image.png';
 import leftOverlay from '../../../assets/Pro-LandingPage/firstsection/left-overlayed.png';
 import rightOverlay from '../../../assets/Pro-LandingPage/firstsection/right-overlayed.png';
@@ -224,7 +224,7 @@ export default function ForBusiness() {
 
       {/* Pricing Section */}
       <section className="pricing-section">
-        <Services plan="monthly" />
+        <Pricing plan="monthly" />
       </section>
 
       {/* FAQ Section */}

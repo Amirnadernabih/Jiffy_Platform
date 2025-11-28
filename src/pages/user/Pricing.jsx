@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ServicesHeader from '../../components/user/ServicesHeader/ServicesHeader';
-import Services from '../../components/user/Services/Services';
+import PricingHeader from '../../components/user/PricingHeader/PricingHeader';
+import PricingComponent from '../../components/user/Pricing/Pricing';
 import { BlueLeftGlow, PurpleRightGlow } from "../../assets/reusable-svg/Svgs";
 
 function App() {
@@ -104,8 +104,8 @@ function App() {
 
       {/* Content above the glows */}
       <div style={{ position: "relative", zIndex: 1 }}>
-        <ServicesHeader plan={plan} setPlan={setPlan} />
-        <Services plan={plan} />
+        <PricingHeader plan={plan} setPlan={setPlan} />
+        <PricingComponent plan={plan} />
       </div>
     </div>
   );

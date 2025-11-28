@@ -8,7 +8,9 @@ export default function Navbar() {
   const offcanvasRef = useRef(null);
   const location = useLocation();
   const isMapPage = location.pathname === '/user/Map';
-  const isAdminPage = location.pathname === '/user/ForBusiness' || location.pathname === '/user/pricing'; // Check if we're on admin page
+  const isAdminPage = location.pathname.startsWith('/user/ForBusiness') || location.pathname === '/user/pricing' || location.pathname.startsWith('/user/services/businesses');
+  const isBusinessContext = location.pathname.startsWith('/user/ForBusiness') || location.pathname.startsWith('/user/services/businesses');
+  const servicesLinkTo = isBusinessContext ? '/user/services/businesses' : '/user/services/customers';
 
   const toggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
@@ -72,7 +74,7 @@ export default function Navbar() {
           {/* Center Links */}
           <ul className="navbar-nav mx-auto text-center middle-nav">
             <li className="nav-item mx-lg-4 my-2 my-lg-0">
-              <Link className="nav-link" to="*">Services</Link>
+              <Link className="nav-link" to={servicesLinkTo}>Services</Link>
             </li>
             <li className="nav-item mx-lg-4 my-2 my-lg-0">
               <Link className="nav-link" to={isAdminPage ? "/user/pricing" : "*"}>
@@ -134,7 +136,7 @@ export default function Navbar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link className="nav-link" to="*" onClick={closeOffcanvas}>Services</Link>
+                <Link className="nav-link" to={servicesLinkTo} onClick={closeOffcanvas}>Services</Link>
               </li>
               <li className="nav-item">
                 <Link 

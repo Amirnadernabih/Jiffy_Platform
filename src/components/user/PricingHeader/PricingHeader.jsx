@@ -1,6 +1,6 @@
-import './ServicesHeader.css';
+import './PricingHeader.css';
 
-const ServicesHeader = ({ plan, setPlan }) => {
+const PricingHeader = ({ plan, setPlan }) => {
 
   return (
     <header className="services-header">
@@ -55,4 +55,4 @@ const ServicesHeader = ({ plan, setPlan }) => {
   );
 };
 
-export default ServicesHeader;
+export default PricingHeader;
