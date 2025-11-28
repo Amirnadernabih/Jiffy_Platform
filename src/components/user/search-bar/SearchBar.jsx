@@ -496,12 +496,7 @@ export default function SearchBar() {
 
 </div>
 
-        <Button
-          id="search-button"
-          variant="primary"
-          className="btn-search"
-          onClick={() => navigate('Map')}
-        >
+        <Button variant="primary" className="btn-search" type="button" onClick={() => navigate('/user/Map')}>
           Search
         </Button>
       </Form>
